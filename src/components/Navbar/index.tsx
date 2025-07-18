@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 
 type NavbarProps = {
   navOpen: boolean
@@ -10,28 +9,35 @@ const Navbar: React.FC<NavbarProps> = ({ navOpen }) => {
   const activeBox = useRef<HTMLDivElement | null>(null)
 
   const initActiveBox = () => {
-    console.log(lastActiveLink.current)
-    console.log(activeBox.current)
-    activeBox.current.style.top = lastActiveLink.current?.offsetTop + 'px'
-    activeBox.current.style.left = lastActiveLink.current?.offsetLeft + 'px'
-    activeBox.current.style.width = lastActiveLink.current?.offsetWidth + 'px'
-    activeBox.current.style.height = lastActiveLink.current?.offsetHeight + 'px'
+    if (lastActiveLink.current && activeBox.current) {
+      activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px'
+      activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px'
+      activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px'
+      activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px'
+    }
   }
 
   useEffect(initActiveBox, [])
 
-  const activeCurrentLink = (event) => {
-    lastActiveLink.current?.classList.remove('active')
-    event.target.classList.add('active')
-    lastActiveLink.current = event.target
+  const activeCurrentLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.target as HTMLAnchorElement
+    if (!target || !activeBox.current) return
 
-    activeBox.current.style.top = event.target.offsetTop + 'px'
-    activeBox.current.style.left = event.target.offsetLeft + 'px'
-    activeBox.current.style.width = event.target.offsetWidth + 'px'
-    activeBox.current.style.height = event.target.offsetHeight + 'px'
+    lastActiveLink.current?.classList.remove('active')
+    target.classList.add('active')
+    lastActiveLink.current = target
+
+    activeBox.current.style.top = target.offsetTop + 'px'
+    activeBox.current.style.left = target.offsetLeft + 'px'
+    activeBox.current.style.width = target.offsetWidth + 'px'
+    activeBox.current.style.height = target.offsetHeight + 'px'
   }
 
-  const navItems = [
+  const navItems: {
+    label: string
+    link: string
+    className: string
+  }[] = [
     { label: 'Home', link: '#home', className: 'nav-link active' },
     { label: 'About', link: '#about', className: 'nav-link' },
     { label: 'Work', link: '#work', className: 'nav-link' },
@@ -41,10 +47,10 @@ const Navbar: React.FC<NavbarProps> = ({ navOpen }) => {
 
   return (
     <nav className={`navbar ${navOpen ? 'active' : ''}`}>
-      {navItems.map(({ label, link, className }, key) => (
+      {navItems.map(({ label, link, className }) => (
         <a
           href={link}
-          key={key}
+          key={label}
           ref={label === 'Home' ? lastActiveLink : undefined}
           className={className}
           onClick={activeCurrentLink}
@@ -52,13 +58,9 @@ const Navbar: React.FC<NavbarProps> = ({ navOpen }) => {
           {label}
         </a>
       ))}
-      <div className='active-box' ref={activeBox}></div>
+      <div className="active-box" ref={activeBox}></div>
     </nav>
   )
-}
-
-Navbar.propTypes = {
-  navOpen: PropTypes.bool.isRequired
 }
 
 export default Navbar
