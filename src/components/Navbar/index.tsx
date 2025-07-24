@@ -18,6 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ navOpen }) => {
   }
 
   useEffect(initActiveBox, [])
+  window.addEventListener('resize',initActiveBox)
 
   const activeCurrentLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const target = event.target as HTMLAnchorElement
