@@ -6,6 +6,7 @@ import people3 from '../../assets/images/people-3.jpg'
 import people4 from '../../assets/images/people-4.jpg'
 import people5 from '../../assets/images/people-5.jpg'
 import people6 from '../../assets/images/people-6.jpg'
+
 import ReviewCard from '../ReviewCard'
 
 const reviews = [
