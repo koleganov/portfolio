@@ -4,11 +4,11 @@ import logo from '../../assets/images/logo.svg'
 const aboutItems = [
     {
       label: 'Project done',
-      number: 45
+      number: 10
     },
     {
       label: 'Years of experience',
-      number: 10
+      number: 3
     }
   ];
 
@@ -17,8 +17,8 @@ const About: React.FC = () => {
     <section id='about' className="section">
         <div className="container">
             <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-                <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                Welcome! I&apos;m Henry, a professional web developer with a knack for crafting visually stunning and highly functional websites. Combining creativity and technical expertise. I transform your vision into digital masterpiece that excels in both appearance and performance.</p>
+                <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] reveal-up">
+                Привет! Меня зовут Константин, я веб-разработчик, создающий современные, удобные и адаптивные сайты. Я не гонюсь за громкими словами — просто качественно выполняю свою работу: от идеи до готового результата. Использую актуальные технологии и практики, уделяю внимание внешнему виду и удобству для пользователя. Мои сайты отлично выглядят и работают на всех устройствах. Всегда открыт к диалогу, на связи и довожу дело до конца. Я не просто пишу код — я создаю решения, которые работают на ваш результат.</p>
                 <div className="flex flex-wrap items-center gap-4 md:gap-7">
                     {
                         aboutItems.map(({label,number}, key) => (

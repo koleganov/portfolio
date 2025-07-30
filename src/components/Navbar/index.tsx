@@ -39,11 +39,10 @@ const Navbar: React.FC<NavbarProps> = ({ navOpen }) => {
     link: string
     className: string
   }[] = [
-    { label: 'Home', link: '#home', className: 'nav-link active' },
-    { label: 'About', link: '#about', className: 'nav-link' },
-    { label: 'Work', link: '#work', className: 'nav-link' },
-    { label: 'Reviews', link: '#reviews', className: 'nav-link' },
-    { label: 'Contact', link: '#contact', className: 'nav-link md:hidden' }
+    { label: 'Главная', link: '#home', className: 'nav-link active' },
+    { label: 'Обо мне', link: '#about', className: 'nav-link' },
+    { label: 'Работы', link: '#work', className: 'nav-link' },
+    { label: 'Отзывы', link: '#reviews', className: 'nav-link' },
   ]
 
   return (
@@ -52,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ navOpen }) => {
         <a
           href={link}
           key={label}
-          ref={label === 'Home' ? lastActiveLink : undefined}
+          ref={label === 'Главная' ? lastActiveLink : undefined}
           className={className}
           onClick={activeCurrentLink}
         >

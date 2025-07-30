@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           <Navbar navOpen={navOpen} />
         </div>
         <a href="#contact" className="max-md:hidden flex btn btn-secondary md:justify-self-end">
-          Contact Me
+          Связаться
         </a>
       </div>
     </header>

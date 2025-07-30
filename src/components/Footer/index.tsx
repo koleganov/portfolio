@@ -5,43 +5,31 @@ import logo from "../../assets/images/logo.svg";
 
 const sitemap = [
   {
-    label: "Home",
+    label: "Главная",
     href: "#home",
   },
   {
-    label: "About",
+    label: "Обо мне",
     href: "#about",
   },
   {
-    label: "Work",
+    label: "Работы",
     href: "#work",
   },
   {
-    label: "Reviews",
+    label: "Отзывы",
     href: "#reviews",
-  },
-  {
-    label: "Contact me",
-    href: "#contact",
   },
 ];
 
 const socials = [
   {
     label: "GitHub",
-    href: "https://www.github.com/codewithsadee-org",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/codewithsadee",
-  },
-  {
-    label: "Twitter X",
-    href: "https://x.com/codewithsadee_",
+    href: "https://github.com/koleganov",
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/codewithsadee",
+    href: "https://instagram.com/koleganov_k",
   },
   {
     label: "CodePen",
@@ -55,26 +43,26 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="lg:grid lg:grid-cols-2">
           <div className="mb-10">
-            <h2 className="headline-1 mb-8 lg:max-w-[12ch]">
-              Let&apos;s work together today!
+            <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
+              Давайте работать вместе!
             </h2>
 
             <ButtonPrimary
               href="mailto:taggz1030@gmail.com"
-              label="Start project"
+              label="Закать проект"
               icon="chevron_right"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4 lg:pl-20">
             <div>
-              <p className="mb-2">Sitemap</p>
+              <p className="mb-2 reveal-up">Навигация</p>
               <ul>
                 {sitemap.map(({ label, href }, key) => (
                   <li key={key}>
                     <a
                       href={href}
-                      className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200"
+                      className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                     >
                       {label}
                     </a>
@@ -84,13 +72,13 @@ const Footer: React.FC = () => {
             </div>
 
             <div>
-              <p className="mb-2">Socials</p>
+              <p className="mb-2 reveal-up">Соц. сети</p>
               <ul>
                 {socials.map(({ label, href }, key) => (
                   <li key={key}>
                     <a
                       href={href}
-                      className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200"
+                      className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                       target="_blank"
                     >
                       {label}
