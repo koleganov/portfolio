@@ -5,7 +5,7 @@ type ProjectCardProps = {
     title: string
     tags: string[]
     projectLink: string
-    classes?: string
+    classes: string
   }
   
 

@@ -107,42 +107,42 @@ const Contact: React.FC = () => {
         >
           <div className="md:grid md:items-center  md:grid-cols-2 md:gap-2 reveal-up">
             <div className="mb-4">
-              <label htmlFor="name" className="label">
-                Name
+              <label htmlFor="name" className="label reveal-up">
+                Имя
               </label>
               <input
                 type="text"
                 name="name"
                 id="name"
-                className="text-field"
+                className="text-field reveal-up"
                 autoComplete="name"
-                placeholder="Konstantin"
+                placeholder="Константин"
                 required
               />
             </div>
 
             <div className="mb-4">
-              <label htmlFor="email" className="label">
-                Email
+              <label htmlFor="email" className="label reveal-up">
+                Почта
               </label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 id="email"
-                className="text-field"
+                className="text-field reveal-up"
                 autoComplete="email"
                 placeholder="email@example.com"
                 required
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 md:col-span-2">
               <label htmlFor="message" className="label"></label>
               <textarea
                 name="message"
                 id="message"
                 placeholder="Привет! Давай работать вместе."
-                className="text-field resize-y min-h-32 max-h-80"
+                className="text-field resize-y min-h-32 max-h-80 w-full reveal-up"
                 required
               ></textarea>
             </div>
