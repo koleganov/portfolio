@@ -11,37 +11,37 @@ import project6 from "../../assets/images/project-6.jpg";
 const works = [
   {
     imgSrc: project1,
-    title: "Full stack music app",
+    title: "Project-1",
     tags: ["API", "MVC", "Development"],
     projectLink: "https://musify-5al0.onrender.com/",
   },
   {
     imgSrc: project2,
-    title: "Free stock photo app",
+    title: "Project-2",
     tags: ["API", "SPA"],
     projectLink: "https://pixstock-official.vercel.app/",
   },
   {
     imgSrc: project3,
-    title: "Recipe app",
+    title: "Project-3",
     tags: ["Development", "API"],
     projectLink: "",
   },
   {
     imgSrc: project4,
-    title: "Real state website",
+    title: "Project-4",
     tags: ["Web-design", "Development"],
     projectLink: "https://github.com/codewithsadee-org/wealthome",
   },
   {
     imgSrc: project5,
-    title: "eCommerce website",
+    title: "Project-5",
     tags: ["eCommerce", "Development"],
     projectLink: "https://github.com/codewithsadee/anon-ecommerce-website",
   },
   {
     imgSrc: project6,
-    title: "vCard Personal portfolio",
+    title: "Project-6",
     tags: ["Web-design", "Development"],
     projectLink: "https://github.com/codewithsadee/vcard-personal-portfolio",
   },

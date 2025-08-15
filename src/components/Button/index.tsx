@@ -17,7 +17,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
 }) => {
   if (href) {
     return (
-      <a href={href} target={target} className={"btn btn-primary" + classes}>
+      <a href={href} target={target} className={"btn btn-primary w-fit" + classes}>
         {label}
 
         {icon ? (
